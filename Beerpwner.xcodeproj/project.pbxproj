@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		EE9DBCB124301443006A02DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBCB024301443006A02DB /* AppDelegate.swift */; };
 		EE9DBCB324301443006A02DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBCB224301443006A02DB /* SceneDelegate.swift */; };
-		EE9DBCB524301443006A02DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBCB424301443006A02DB /* ViewController.swift */; };
 		EE9DBCB824301443006A02DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9DBCB624301443006A02DB /* Main.storyboard */; };
 		EE9DBCBA24301446006A02DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9DBCB924301446006A02DB /* Assets.xcassets */; };
 		EE9DBCBD24301446006A02DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9DBCBB24301446006A02DB /* LaunchScreen.storyboard */; };
+		EE9DBCC524302083006A02DB /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBCC424302083006A02DB /* ItemsViewController.swift */; };
+		EE9DBCC724302123006A02DB /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBCC624302123006A02DB /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EE9DBCAD24301443006A02DB /* Beerpwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beerpwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9DBCB024301443006A02DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE9DBCB224301443006A02DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE9DBCB424301443006A02DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE9DBCB724301443006A02DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE9DBCB924301446006A02DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9DBCBC24301446006A02DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE9DBCBE24301446006A02DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE9DBCC424302083006A02DB /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		EE9DBCC624302123006A02DB /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				EE9DBCB024301443006A02DB /* AppDelegate.swift */,
 				EE9DBCB224301443006A02DB /* SceneDelegate.swift */,
-				EE9DBCB424301443006A02DB /* ViewController.swift */,
 				EE9DBCB624301443006A02DB /* Main.storyboard */,
+				EE9DBCC624302123006A02DB /* Beer.swift */,
+				EE9DBCC424302083006A02DB /* ItemsViewController.swift */,
 				EE9DBCB924301446006A02DB /* Assets.xcassets */,
 				EE9DBCBB24301446006A02DB /* LaunchScreen.storyboard */,
 				EE9DBCBE24301446006A02DB /* Info.plist */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE9DBCB524301443006A02DB /* ViewController.swift in Sources */,
 				EE9DBCB124301443006A02DB /* AppDelegate.swift in Sources */,
+				EE9DBCC524302083006A02DB /* ItemsViewController.swift in Sources */,
 				EE9DBCB324301443006A02DB /* SceneDelegate.swift in Sources */,
+				EE9DBCC724302123006A02DB /* Beer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
