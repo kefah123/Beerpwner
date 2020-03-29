@@ -1,5 +1,5 @@
 //
-//  ItemsViewController.swift
+//  BeersViewController.swift
 //  Beerpwner
 //
 //  Created by Kwasi Efah on 3/28/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemsViewController: UITableViewController {
+class BeersViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
