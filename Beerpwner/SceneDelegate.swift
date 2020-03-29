@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create an ItemStore
         let beerStore = BeerStore()
         // Set beerStore in controller
+  
         let beerController = window!.rootViewController as! BeersViewController
         beerController.beerStore = beerStore
     }

@@ -12,6 +12,7 @@ class Beer: NSObject {
     var valueInDollars: Int
     var brewery: String
     var address: String
+    let dateCreated: Date
 
 
 
@@ -20,6 +21,7 @@ class Beer: NSObject {
     self.valueInDollars = valueInDollars
     self.brewery = brewery
     self.address = address
+    self.dateCreated = Date()
     super.init()
  }
     

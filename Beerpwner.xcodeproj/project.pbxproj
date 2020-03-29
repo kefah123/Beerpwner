@@ -15,6 +15,7 @@
 		EE9DBCC724302123006A02DB /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBCC624302123006A02DB /* Beer.swift */; };
 		EE9DBCC9243025ED006A02DB /* BeerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBCC8243025ED006A02DB /* BeerStore.swift */; };
 		EE9DBCCA2430312D006A02DB /* BeersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBCC424302083006A02DB /* BeersViewController.swift */; };
+		EE9DBCCC24304B7D006A02DB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9DBCCB24304B7D006A02DB /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EE9DBCC424302083006A02DB /* BeersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersViewController.swift; sourceTree = "<group>"; };
 		EE9DBCC624302123006A02DB /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		EE9DBCC8243025ED006A02DB /* BeerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerStore.swift; sourceTree = "<group>"; };
+		EE9DBCCB24304B7D006A02DB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				EE9DBCB024301443006A02DB /* AppDelegate.swift */,
 				EE9DBCB224301443006A02DB /* SceneDelegate.swift */,
 				EE9DBCB624301443006A02DB /* Main.storyboard */,
+				EE9DBCCB24304B7D006A02DB /* DetailViewController.swift */,
 				EE9DBCC624302123006A02DB /* Beer.swift */,
 				EE9DBCC8243025ED006A02DB /* BeerStore.swift */,
 				EE9DBCC424302083006A02DB /* BeersViewController.swift */,
@@ -147,6 +150,7 @@
 				EE9DBCB124301443006A02DB /* AppDelegate.swift in Sources */,
 				EE9DBCC9243025ED006A02DB /* BeerStore.swift in Sources */,
 				EE9DBCB324301443006A02DB /* SceneDelegate.swift in Sources */,
+				EE9DBCCC24304B7D006A02DB /* DetailViewController.swift in Sources */,
 				EE9DBCC724302123006A02DB /* Beer.swift in Sources */,
 				EE9DBCCA2430312D006A02DB /* BeersViewController.swift in Sources */,
 			);
