@@ -22,16 +22,17 @@ class Beer: NSObject {
     self.address = address
     super.init()
  }
-    /*
+    
     convenience init(random: Bool = false) {
         if random {
             let myBeers = ["Conehead", "Little Wolf", "Naragansett"]
             let breweries = ["Zero Gravity","Zero Gravity","Naragansett Brewering Company"]
             let addresses = ["Burlington,VT", "Burlington,Vt", "Cranston,Rhode Island"]
             let prices = [5,6,4]
-            self.init(name: randomName, serialNumber: randomSerialNumber, valueInDollars: randomValue)
-            } else {
-            self.init(name: "", serialNumber: nil, valueInDollars: 0) }
-            }*/
+            let idx = arc4random_uniform(UInt32(myBeers.count))
+            self.init(name: myBeers[Int(idx)], brewery: breweries[Int(idx)], valueInDollars: prices[Int(idx)], address: addresses[Int(idx)])
+        } else {
+            self.init(name: "", brewery: "", valueInDollars: 0, address: "") }
+            }
 }
 

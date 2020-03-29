@@ -6,4 +6,20 @@
 //  Copyright © 2020 KE. All rights reserved.
 //
 
-import Foundation
+import UIKit
+class BeerStore {
+    var allBeers = [Beer]()
+    init() {
+        createBeer()
+    for _ in 0..<3 {
+            createBeer()
+        }
+    }
+
+
+@discardableResult func createBeer() -> Beer {
+    let newBeer = Beer(random: true)
+    allBeers.append(newBeer)
+    return newBeer
+    }
+}
