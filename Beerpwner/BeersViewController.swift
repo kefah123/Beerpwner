@@ -10,6 +10,19 @@ import UIKit
 
 class BeersViewController: UITableViewController {
     var beerStore: BeerStore!
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
+        let newItem = beerStore.createBeer()
+        if let index = beerStore.allBeers.firstIndex(of: newItem) {
+            let indexPath = IndexPath(row: index, section: 0)
+            tableView.insertRows(at: [indexPath], with: .automatic)
+        }
+    }
+       
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder:aDecoder)
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +31,11 @@ class BeersViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -37,44 +55,43 @@ class BeersViewController: UITableViewController {
         let beer = beerStore.allBeers[indexPath.row]
         cell.textLabel?.text = beer.name
         cell.detailTextLabel?.text = "$\(beer.valueInDollars)"
+        if beer.valueInDollars > 25 {
+            cell.detailTextLabel?.textColor = .red
+        } else if beer.valueInDollars > 15 {
+            cell.detailTextLabel?.textColor = .orange
+        } else {
+            cell.detailTextLabel?.textColor = UIColor(red: 0, green: 0.8, blue: 0, alpha: 0.8)
+        }
         return cell
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            let beer = beerStore.allBeers[indexPath.row]
+            let title = "Delete \(beer.name)?"
+            let message = "Are you sure you want to delete this item?"
+            let ac = UIAlertController(title: title, message: message,
+            preferredStyle: .actionSheet)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            ac.addAction(cancelAction)
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
+                self.beerStore.removeBeer(beer)
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+                })
+            ac.addAction(deleteAction)
+            present(ac, animated: true, completion: nil)
+        } 
     }
-    */
+    
 
-    /*
+    
     // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        beerStore.moveBeer(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+    
 
     
     // MARK: - Navigation

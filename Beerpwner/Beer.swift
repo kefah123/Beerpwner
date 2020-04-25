@@ -7,14 +7,29 @@
 //
 import UIKit
 // The Beer class stores information about an individual beer
-class Beer: NSObject {
+class Beer: NSObject, NSCoding {
     var name: String
     var valueInDollars: Int
     var brewery: String
     var address: String
     let dateCreated: Date
 
-
+    func encode(with aCoder: NSCoder) {
+    aCoder.encode(name, forKey: "name")
+    aCoder.encode(dateCreated, forKey: "dateCreated")
+    aCoder.encode(brewery, forKey: "brewery")
+    aCoder.encode(address, forKey: "address")
+    aCoder.encode(valueInDollars, forKey: "valueInDollars")
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+    name = aDecoder.decodeObject(forKey: "name") as! String
+    dateCreated = aDecoder.decodeObject(forKey: "dateCreated") as! Date
+    brewery = aDecoder.decodeObject(forKey: "brewery") as! String
+    address = aDecoder.decodeObject(forKey: "address") as! String
+    valueInDollars = aDecoder.decodeInteger(forKey: "valueInDollars")
+    super.init()
+    }
 
     init(name: String, brewery: String, valueInDollars: Int, address: String) {
     self.name = name
